@@ -54,8 +54,7 @@ public class MiniBookStore {
                 case 1: case 2:
                     service.processMenu();
                     break;
-                //case 2:
-                   // bookService.processMenu();
+
                 case 0:
                     System.out.println("İyi günler...");
                     break;
