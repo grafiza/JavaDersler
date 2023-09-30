@@ -42,6 +42,8 @@ public class AracSigortaApplication {
         boolean isAgain=true;
         do {
             System.out.println("Tarife Dönemi Seçiniz:");
+
+            System.out.println("----------------------");
             System.out.println("1.dönem: Haziran 2023");
             System.out.println("2.dönem: Aralık 2023");
             donemSecimi = inp.nextInt();
@@ -60,7 +62,10 @@ public class AracSigortaApplication {
                 inp.nextLine();
                 arac.aracTipi = aracTipleri.get(secim);
                 arac.primHesapla(donemSecimi);
-            } else System.out.println("Hatalı Giriş");
+            }
+            else
+                System.out.println("Hatalı Giriş");
+
             System.out.println("\nDevam etmek için 1, Çıkış için 0'a basınız...");
             if(inp.nextInt()==0)
                 isAgain=false;

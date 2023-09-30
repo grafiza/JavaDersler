@@ -32,7 +32,9 @@ public class Arac {
 
     private void yazdir() {
         System.out.printf("%-20s %-20s %-20s\n", "Araç Tipi", "Tarife Dönemi", "Sigorta Primi");
-        System.out.printf("%-20s %-20s %-20s", this.aracTipi, this.donem, this.prim);
+        System.out.println("-".repeat(60));
+        System.out.printf("%-20s %-20s %-20s\n", this.aracTipi, this.donem, this.prim);
+        System.out.println("-".repeat(60));
     }
 
     public void primOtobusHesapla(int donem) {
@@ -42,13 +44,16 @@ public class Arac {
         System.out.println("2. 31 ve üstü");
         int secim = scan.nextInt();
         scan.nextLine();
-        if (donem == 1)
-            this.prim = secim == 1 ? 4000 : 5000;
-        else if (donem == 2)
-            this.prim = secim == 1 ? 4500 : 5500;
+        if(secim==1 || secim==2) {
+            if (donem == 1)
+                this.prim = secim == 1 ? 4000 : 5000;
+            else if (donem == 2)
+                this.prim = secim == 1 ? 4500 : 5500;
+            else
+                System.out.println("Hatalı Giriş");
+        }
         else
             System.out.println("Hatalı Giriş");
-
     }
 
 }
