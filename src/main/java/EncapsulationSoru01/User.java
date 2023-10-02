@@ -2,11 +2,11 @@ package EncapsulationSoru01;
 
 public class User {
 
-    private int id;
-    private String userName;
-    private String password;
-    private Boolean active;
-    private Boolean signedIn;
+    protected int id;
+    protected String userName;
+    protected String password;
+    protected Boolean active;
+    protected Boolean signedIn;
 
     public User() {
     }
@@ -18,6 +18,46 @@ public class User {
         this.active = active;
         this.signedIn = signedIn;
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public Boolean getSignedIn() {
+        return signedIn;
+    }
+
+    public void setSignedIn(Boolean signedIn) {
+        this.signedIn = signedIn;
     }
 
     @Override

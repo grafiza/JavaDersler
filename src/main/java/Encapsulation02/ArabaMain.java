@@ -17,7 +17,7 @@ public class ArabaMain {
         List<Araba> arabalar=new ArrayList<>();
         Araba araba1 = new Araba("Mazda", "Kırmızı", 2000, 2023);
         Araba araba2 = new Araba("Mercedes", "Kırmızı", 2000, 2023);
-        Araba araba3;
+        Araba araba3=new Araba();
         Scanner scan = new Scanner(System.in);
         String model, renk;
         int motor, yil;
@@ -37,7 +37,10 @@ public class ArabaMain {
             scan.nextLine();
             yilKontrol(yil);
         } while (!yilKontrol(yil));
-        araba3=new Araba(model,renk,motor,yil);
+        araba3.setModel(model);
+        araba3.setRenk(renk);
+        araba3.setYil(yil);
+        araba3.setMotor(motor);
         arabalar.add(araba1);
         arabalar.add(araba2);
         arabalar.add(araba3);

@@ -11,7 +11,7 @@ static int id=100;
 
         String username,password;
         List<User> myList=new ArrayList<>();
-        User user;
+        User user=new User();
         for (int i = 0; i <2; i++) {
             System.out.println(i+1+". Kullanıcı adı:");
             username=scan.nextLine();
@@ -21,7 +21,11 @@ static int id=100;
                 sifreKontrol(password);
             }while (!sifreKontrol(password));
 
-            user=new User(id,username,password,true,true);
+            user.setActive(true);
+            user.setSignedIn(true);
+            user.setUserName(username);
+            user.setPassword(password);
+
             myList.add(user);
             id++;
         }
