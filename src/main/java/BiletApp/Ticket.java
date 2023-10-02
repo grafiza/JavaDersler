@@ -1,6 +1,7 @@
 package BiletApp;
 
-public class Ticket {
+public class
+Ticket {
     /*
     A şehrinden uçmak isteyen bir yolcu B şehrine 500km C şehrine  700km  D şehrine  900 km mesafededir.
     Bilet tarifesi:
