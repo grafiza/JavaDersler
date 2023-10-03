@@ -105,25 +105,28 @@ public class UserService {
     }
 
     void login() {
-        String email,password;
-        boolean isSuccess=false;
+        String email, password;
+        boolean isSuccess = false;
         do {
             System.out.println("E-mail:");
             email = scan.nextLine();
             System.out.println("Password:");
             password = scan.nextLine();
             User user = mapList.get(email);
-            if (password.equals(user.getPassword())) {
-                System.out.println("--------------");
-                System.out.println("Giriş Başarılı");
-                System.out.println("--------------");
+            if (user !=null){
+                if (password.equals(user.getPassword())) {
+                    System.out.println("--------------");
+                    System.out.println("Giriş Başarılı");
+                    System.out.println("--------------");
 
-                isSuccess=true;
+                    isSuccess = true;
+                } else {
+                    System.out.println("Kullanıcı adı veya şifre hatalı");
+                    isSuccess = false;
+                }
             }
-            else {
-                System.out.println("Kullanıcı adı veya şifre hatalı");
-                isSuccess=false;
-            }
-        }while (!isSuccess);
+            else
+                System.out.println("kullanıcı bulıunamadı!");
+        } while (!isSuccess);
     }
 }
