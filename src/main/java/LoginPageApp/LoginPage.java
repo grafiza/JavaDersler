@@ -14,7 +14,7 @@ public class LoginPage {
 
         int select;
         do {
-            System.out.println("=== TECHPROEDUCATION ===");
+            System.out.println("   User Login Panel");
             System.out.println("1. üye ol");
             System.out.println("2. Giriş yap");
             System.out.println("0. ÇIKIŞ");
